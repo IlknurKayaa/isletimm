@@ -1,3 +1,5 @@
+package isletim;
+
 public class Process {
     public int id;
     public int varisZamani;
@@ -5,10 +7,10 @@ public class Process {
     public int calisacagiSure;
     public int olumAdimi;
     public int calistigiSure;
-    public String Color; // 8 adet rastgele renk Ã¼retilmektedir.
+    public String Color; // 8 adet rastgele renk üretilmektedir.
 
-    public String BackGround; // 8 adet rast gele arka plan rengi Ã¼retilmektedir.
-    //BU RENKLER ASLA Ã‡AKIÅMAMAKTADIR. 8*8'DEN 64 FARKLI PROSESS ID'SÄ° Ä°Ã‡Ä°N RENK KOMBÄ°NASYONU YAPILMIÅTIR.
+    public String BackGround; // 8 adet rast gele arka plan rengi üretilmektedir.
+    //BU RENKLER ASLA ÇAKIŞMAMAKTADIR. 8*8'DEN 64 FARKLI PROSESS ID'Sİ İÇİN RENK KOMBİNASYONU YAPILMIŞTIR.
 
     public Process(int id, int varisZamani, int oncelik,int kalanZaman,String Color,String BackGround){
         this.id =0000+id;
@@ -17,10 +19,10 @@ public class Process {
         this.calisacagiSure = kalanZaman;
         this.Color = Color;
         this.BackGround = BackGround;
-        this.olumAdimi = varisZamani*-1; //Ã¶lÃ¼m adÄ±mÄ±ndan kasÄ±t 20 saniyelik bekleme sÃ¼residir.
-        //bu aÃ§lÄ±k sÃ¼resi sanal olarak txt'den okunan verilerin her biri iÃ§in artacaÄŸÄ±ndan dolayÄ±
-        //her prosesin gerÃ§ek zamanda gelebilmesinin saÄŸlamak adÄ±na bÃ¼tÃ¼n proseslerin geliÅŸ zamanlarÄ±nÄ±n negatifini alÄ±yoruz.
-        // Ã¶lÃ¼m adÄ±mÄ± 0 olduÄŸunda proses gerÃ§ekten de gerÃ§ek zamanda gelmiÅŸ olacaktÄ±r.
+        this.olumAdimi = varisZamani*-1; //ölüm adımından kasıt 20 saniyelik bekleme süresidir.
+        //bu açlık süresi sanal olarak txt'den okunan verilerin her biri için artacağından dolayı
+        //her prosesin gerçek zamanda gelebilmesinin sağlamak adına bütün proseslerin geliş zamanlarının negatifini alıyoruz.
+        // ölüm adımı 0 olduğunda proses gerçekten de gerçek zamanda gelmiş olacaktır.
         this.calistigiSure=0;
     }
     public int getId(){
@@ -58,15 +60,15 @@ public class Process {
         this.olumAdimi=0;
         if(saniye<10)
             if(id<10)
-                System.out.println(Color+ BackGround +saniye + ".0000 sn proses yÃ¼rÃ¼tÃ¼lÃ¼yor     (id:"+id+"  oncelik:"+oncelik+"  kalan sure:"+kalanSure+ " sn )"+"\u001B[0m");
+                System.out.println(Color+ BackGround +saniye + ".0000 sn proses yürütülüyor     (id:"+id+"  oncelik:"+oncelik+"  kalan sure:"+kalanSure+ " sn )"+"\u001B[0m");
             else
-                System.out.println(Color+ BackGround +saniye + ".0000 sn proses yÃ¼rÃ¼tÃ¼lÃ¼yor    (id:"+id+"  oncelik:"+oncelik+"  kalan sure:"+kalanSure+ " sn )"+"\u001B[0m");
+                System.out.println(Color+ BackGround +saniye + ".0000 sn proses yürütülüyor    (id:"+id+"  oncelik:"+oncelik+"  kalan sure:"+kalanSure+ " sn )"+"\u001B[0m");
 
         if(saniye>=10)
             if (id<10)
-                System.out.println(Color+ BackGround +saniye + ".0000 sn proses yÃ¼rÃ¼tÃ¼lÃ¼yor    (id:"+id+"  oncelik:"+oncelik+"  kalan sure:"+kalanSure+ " sn )"+"\u001B[0m");
+                System.out.println(Color+ BackGround +saniye + ".0000 sn proses yürütülüyor    (id:"+id+"  oncelik:"+oncelik+"  kalan sure:"+kalanSure+ " sn )"+"\u001B[0m");
             else
-                System.out.println(Color+ BackGround +saniye + ".0000 sn proses yÃ¼rÃ¼tÃ¼lÃ¼yor   (id:"+id+"  oncelik:"+oncelik+"  kalan sure:"+kalanSure+ " sn )"+"\u001B[0m");
+                System.out.println(Color+ BackGround +saniye + ".0000 sn proses yürütülüyor   (id:"+id+"  oncelik:"+oncelik+"  kalan sure:"+kalanSure+ " sn )"+"\u001B[0m");
 
     }
     public void zamanAsimi(int saniye,int kalanSure){
